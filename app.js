@@ -14,9 +14,9 @@ app.use(express.json())
 
 //default router
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + "/build/index.html");
+    res.sendFile(__dirname + "/front-end/index.html");
 })
-app.use(express.static(__dirname + '/build'));
+app.use(express.static(__dirname + '/front-end'));
 //mongoDB setup
 const db = require('./setup/myurl').mongoUrl
 
